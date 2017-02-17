@@ -26,6 +26,7 @@
 		5A3E24FD1E57706A00EAD558 /* Movie+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24FC1E57706A00EAD558 /* Movie+Convenience.swift */; };
 		5A3E24FF1E57722F00EAD558 /* FavoriteMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24FE1E57722F00EAD558 /* FavoriteMovieController.swift */; };
 		5A3E25011E577A9300EAD558 /* FavoriteMovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E25001E577A9300EAD558 /* FavoriteMovieListTableViewCell.swift */; };
+		5A3E25031E57A70A00EAD558 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E25021E57A70A00EAD558 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5A3E24FC1E57706A00EAD558 /* Movie+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Convenience.swift"; sourceTree = "<group>"; };
 		5A3E24FE1E57722F00EAD558 /* FavoriteMovieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovieController.swift; sourceTree = "<group>"; };
 		5A3E25001E577A9300EAD558 /* FavoriteMovieListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovieListTableViewCell.swift; sourceTree = "<group>"; };
+		5A3E25021E57A70A00EAD558 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				5A3E24F51E576A4300EAD558 /* PosterViewController.swift */,
 				5A3E24E51E575D3C00EAD558 /* FavoriteMoviesTableViewController.swift */,
 				5A3E25001E577A9300EAD558 /* FavoriteMovieListTableViewCell.swift */,
+				5A3E25021E57A70A00EAD558 /* MainTabBarController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				5A3E24FF1E57722F00EAD558 /* FavoriteMovieController.swift in Sources */,
 				5A3E25011E577A9300EAD558 /* FavoriteMovieListTableViewCell.swift in Sources */,
 				5A3E24CA1E57585E00EAD558 /* AppDelegate.swift in Sources */,
+				5A3E25031E57A70A00EAD558 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

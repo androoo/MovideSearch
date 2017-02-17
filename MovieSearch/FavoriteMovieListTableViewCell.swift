@@ -44,5 +44,39 @@ class FavoriteMovieListTableViewCell: UITableViewCell {
     func updateView() {
         guard let movie = movie else { return }
         movieTitleLabel.text = movie.name
+        descriptionLabel.text = movie.about
+    
+        DispatchQueue.main.async {
+            ImageController.getPoster(atURL: movie.poster!, completion: { (image) in
+                self.posterImageView.image = image
+            })
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

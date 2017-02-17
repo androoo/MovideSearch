@@ -58,13 +58,10 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
-        let name = Keys.titleKey
-        FavoriteMovieController.shared.add(name: name)
-        
-        
-    }
-    
-    
-    
-    
+        let name = movie?.title
+        let about = movie?.description
+        let poster = movie?.poster
+        FavoriteMovieController.shared.add(name: name!, poster: poster!, about: about!)
+        dismiss(animated: true, completion: nil)
+    }  
 }

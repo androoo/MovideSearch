@@ -12,6 +12,12 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
     
     //MARK: - View Life
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Favorites"
+        design()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -33,6 +39,23 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let movie = FavoriteMovieController.shared.favoriteMovies[indexPath.row]
+            FavoriteMovieController.shared.remove(movie: movie)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+    
+    //MARK: - Design 
+    
+    func design() {
+        navigationController?.navigationBar.barTintColor = UIColor.init(red: 121.0/255.0, green: 52.0/255.0, blue: 217.0/255.0, alpha: 1)
+        
+    }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +67,7 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
         guard let movie = sender.movie,
             let indexPath = tableView.indexPath(for: sender) else { return }
         FavoriteMovieController.shared.toggleFavorite(movie: movie)
+        FavoriteMovieController.shared.remove(movie: movie)
         tableView.reloadRows(at: [indexPath], with: .automatic)
         self.tableView.reloadData()
     }

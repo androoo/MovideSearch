@@ -11,10 +11,11 @@ import CoreData
 
 extension Movie {
     
-    @discardableResult convenience init(name: String, favorite: Bool = false, about: String, context: NSManagedObjectContext = CoreDataStack.context) {
+    @discardableResult convenience init(name: String, poster: String, favorite: Bool = false, about: String, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.name = name
+        self.poster = poster
         self.favorite = favorite
         self.about = about
     }

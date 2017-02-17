@@ -23,8 +23,13 @@ class FavoriteMovieController {
     
     // CRUD
     
-    func add(name:String) {
-        let _ = Movie(name: Keys.titleKey, about: Keys.descriptionKey)
+    func add(name: String, poster: String, about: String) {
+        let _ = Movie(name: name, poster: poster, about: about)
+        saveToPersistentStorage()
+    }
+    
+    func remove(movie: Movie) {
+        CoreDataStack.context.delete(movie)
         saveToPersistentStorage()
     }
     
@@ -39,7 +44,7 @@ class FavoriteMovieController {
         do {
             try CoreDataStack.context.save()
         } catch let error {
-            print("could not save movie")
+            print("could not save movie \(error)")
         }
     }
 }
