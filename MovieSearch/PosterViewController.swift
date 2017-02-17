@@ -65,3 +65,26 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
         dismiss(animated: true, completion: nil)
     }  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

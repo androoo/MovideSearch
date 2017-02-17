@@ -365,11 +365,11 @@
             </objects>
             <point key="canvasLocation" x="44" y="-833.43328335832086"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="ZK5-64-fPu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Djb-hr-JHz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabHeart" id="NAY-ZL-bCb"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="tabHeart" id="NAY-ZL-bCb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aj0-WS-V9j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

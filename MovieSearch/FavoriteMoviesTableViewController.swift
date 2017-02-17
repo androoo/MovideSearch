@@ -35,7 +35,6 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
         let movie = FavoriteMovieController.shared.favoriteMovies[indexPath.row]
         cell.delegate = self
         cell.movie = movie
-        
         return cell
     }
     
@@ -53,7 +52,6 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
     
     func design() {
         navigationController?.navigationBar.barTintColor = UIColor.init(red: 121.0/255.0, green: 52.0/255.0, blue: 217.0/255.0, alpha: 1)
-        
     }
     
     
@@ -64,11 +62,39 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
     //MARK: - Favorite Button Delegate
     
     func favoriteMovieButtonTapped(_ sender: FavoriteMovieListTableViewCell) {
-        guard let movie = sender.movie,
-            let indexPath = tableView.indexPath(for: sender) else { return }
+        guard let movie = sender.movie else { return }
+        
         FavoriteMovieController.shared.toggleFavorite(movie: movie)
         FavoriteMovieController.shared.remove(movie: movie)
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+
         self.tableView.reloadData()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
