@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+import UIKit
+
+class ImageController {
+    
+    static func getPoster(atURL urlString: String, completion: @escaping (UIImage?) -> Void) {
+        
+        guard let imageUrl = Keys.imageURL?.appendingPathComponent(urlString) else { return }
+        
+        NetworkController.performRequest(forURL: imageUrl, withMethod: .get) { (data, error) in
+            
+            if let error = error {
+                NSLog(error.localizedDescription)
+            }
+            
+            guard let data = data, let image = UIImage(data: data) else {
+                completion(nil)
+                return
+            }
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+    }
+}

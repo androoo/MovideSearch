@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+struct Movie {
+    
+    let title: String
+    let rating: Float
+    let description: String
+    let poster: String
+    
+}
+
+extension Movie {
+    
+    init?(dictionary: JSONDictionary) {
+        guard let title = dictionary[Keys.titleKey] as? String,
+            let rating = dictionary[Keys.ratingKey] as? Float,
+            let description = dictionary[Keys.descriptionKey] as? String,
+            let poster = dictionary[Keys.posterKey] as? String else { return nil }
+        self.init(title: title, rating: rating, description: description, poster: poster)
+    }
+    
+}

@@ -10,6 +10,16 @@ import Foundation
 
 struct Keys {
     
+    //MARK: - Reuse Identifiers 
+    
+    static let searchResultsMovieDetailCell = "movieSearchDetailCell"
+    
+    
+    //MARK: - Seque Identifiers
+    
+    static let toPosterDetail = "toPosterDetail"
+    
+    
     //MARK: - API Keys
     
     static let apiKey = "1796c09fd7616b8f1534c86ee98cc305"

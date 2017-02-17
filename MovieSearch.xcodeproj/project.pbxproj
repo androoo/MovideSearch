@@ -20,6 +20,7 @@
 		5A3E24F01E575DB500EAD558 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24EF1E575DB500EAD558 /* MovieController.swift */; };
 		5A3E24F21E575DBF00EAD558 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24F11E575DBF00EAD558 /* Design.swift */; };
 		5A3E24F41E575DFE00EAD558 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24F31E575DFE00EAD558 /* ImageController.swift */; };
+		5A3E24F61E576A4300EAD558 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E24F51E576A4300EAD558 /* PosterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5A3E24EF1E575DB500EAD558 /* MovieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		5A3E24F11E575DBF00EAD558 /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		5A3E24F31E575DFE00EAD558 /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		5A3E24F51E576A4300EAD558 /* PosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				5A3E24E31E575D1300EAD558 /* MovieSearchTableViewController.swift */,
-				5A3E24E51E575D3C00EAD558 /* FavoriteMoviesTableViewController.swift */,
 				5A3E24E71E575D5C00EAD558 /* MovieSearchResultsDetailTableViewCell.swift */,
+				5A3E24E51E575D3C00EAD558 /* FavoriteMoviesTableViewController.swift */,
+				5A3E24F51E576A4300EAD558 /* PosterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				5A3E24EE1E575DAC00EAD558 /* Movie.swift in Sources */,
 				5A3E24EA1E575D7800EAD558 /* NetworkController.swift in Sources */,
 				5A3E24EC1E575D8500EAD558 /* Keys.swift in Sources */,
+				5A3E24F61E576A4300EAD558 /* PosterViewController.swift in Sources */,
 				5A3E24E81E575D5C00EAD558 /* MovieSearchResultsDetailTableViewCell.swift in Sources */,
 				5A3E24F41E575DFE00EAD558 /* ImageController.swift in Sources */,
 				5A3E24F01E575DB500EAD558 /* MovieController.swift in Sources */,
