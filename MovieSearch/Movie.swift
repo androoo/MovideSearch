@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie {
+struct FoundMovie {
     
     let title: String
     let rating: Float
@@ -17,7 +17,7 @@ struct Movie {
     
 }
 
-extension Movie {
+extension FoundMovie {
     
     init?(dictionary: JSONDictionary) {
         guard let title = dictionary[Keys.titleKey] as? String,

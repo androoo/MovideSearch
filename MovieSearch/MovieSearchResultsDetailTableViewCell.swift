@@ -12,7 +12,7 @@ class MovieSearchResultsDetailTableViewCell: UITableViewCell {
     
     //MARK: - Properties 
     
-    var movie: Movie? {
+    var movie: FoundMovie? {
         didSet {
             updateViews()
         }

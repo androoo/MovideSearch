@@ -13,6 +13,7 @@ struct Keys {
     //MARK: - Reuse Identifiers 
     
     static let searchResultsMovieDetailCell = "movieSearchDetailCell"
+    static let movieListViewCell = "movieListCell"
     
     
     //MARK: - Seque Identifiers

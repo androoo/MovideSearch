@@ -12,7 +12,7 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //MARK: - Properties
     
-    var movie: Movie? {
+    var movie: FoundMovie? {
         didSet {
             updateViews()
         }
@@ -21,6 +21,8 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
     //MARK: - Outlets
     
     @IBOutlet weak var posterDetailImageView: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
     
     //MARK: - View Life
@@ -31,7 +33,7 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        design()
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -45,6 +47,10 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
         })
     }
     
+    func design() {
+        favoriteButton.backgroundColor = UIColor.init(red: 235.0/255.0, green: 28.0/255.0, blue: 101.0/255.0, alpha: 1)
+    }
+    
     //MARK: - UI Actions
     
     @IBAction func closeButtonTapped(_ sender: Any) {
@@ -52,6 +58,10 @@ class PosterViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        let name = Keys.titleKey
+        FavoriteMovieController.shared.add(name: name)
+        
+        
     }
     
     

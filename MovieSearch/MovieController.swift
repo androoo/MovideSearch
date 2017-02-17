@@ -10,7 +10,7 @@ import Foundation
 
 class MovieController {
     
-    static func fetchMovies(withApiKey apiKey: String, andSearchTerm title: String, completion: @escaping (_ movis: [Movie]) -> Void) {
+    static func fetchMovies(withApiKey apiKey: String, andSearchTerm title: String, completion: @escaping (_ movis: [FoundMovie]) -> Void) {
         
         guard let url = Keys.baseURL else { return }
         let urlParameters = ["api_key": "\(Keys.apiKey)", "query": "\(title)"]
@@ -33,7 +33,7 @@ class MovieController {
                 return
             }
             
-            let movies = moviesDictionary.flatMap { Movie(dictionary: $0) }
+            let movies = moviesDictionary.flatMap { FoundMovie(dictionary: $0) }
             
             DispatchQueue.main.async {
                 completion(movies)

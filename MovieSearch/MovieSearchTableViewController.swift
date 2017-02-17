@@ -12,10 +12,17 @@ class MovieSearchTableViewController: UITableViewController, UISearchBarDelegate
     
     //MARK: - Properties
     
-    var movies: [Movie] = [] {
+    var movies: [FoundMovie] = [] {
         didSet {
             tableView.reloadData()
         }
+    }
+    
+    //MARK: - View Life
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        design()
     }
     
 
@@ -29,7 +36,6 @@ class MovieSearchTableViewController: UITableViewController, UISearchBarDelegate
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Keys.searchResultsMovieDetailCell, for: indexPath) as? MovieSearchResultsDetailTableViewCell else { return MovieSearchResultsDetailTableViewCell()}
         
         cell.movie = movies[indexPath.row]
-        
         return cell
     }
     
@@ -46,11 +52,15 @@ class MovieSearchTableViewController: UITableViewController, UISearchBarDelegate
     //MARK: - API Methods
     
     func fetch(moviesWithTitle title: String) {
-        
         MovieController.fetchMovies(withApiKey: Keys.apiKey, andSearchTerm: title) { (movies) in
             self.movies = movies
         }
-        
+    }
+    
+    //MARK: - Helper Methods
+    
+    func design() {
+        navigationController?.navigationBar.barTintColor = UIColor.init(red: 121.0/255.0, green: 52.0/255.0, blue: 217.0/255.0, alpha: 1)
     }
     
     
