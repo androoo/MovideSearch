@@ -29,6 +29,7 @@ class FavoriteMoviesTableViewController: UITableViewController, FavoriteMovieBut
         let movie = FavoriteMovieController.shared.favoriteMovies[indexPath.row]
         cell.delegate = self
         cell.movie = movie
+        
         return cell
     }
     
